@@ -6,7 +6,7 @@ if test -n "$ngx_module_link"; then
     ngx_module_srcs="$ngx_addon_dir/ngx_http_barcode_module.c"
     ngx_module_deps="$NGX_ADDON_DEPS $ngx_addon_dir/ngx_http_barcode_module.h"
     CFLAGS="$CFLAGS"
-    CORE_LIBS="$CORE_LIBS -l zint"
+    CORE_LIBS="$CORE_LIBS -l zint /usr/lib/x86_64-linux-gnu/libpng12.so.0 /usr/lib/x86_64-linux-gnu/libpng12.a"
 
     . auto/module
 else
@@ -14,5 +14,5 @@ else
     NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_barcode_module.c"
     NGX_ADDON_DEPS="$NGX_ADDON_DEPS $ngx_addon_dir/ngx_http_barcode_module.h"
     CFLAGS="$CFLAGS"
-    CORE_LIBS="$CORE_LIBS -l zint"
+    CORE_LIBS="$CORE_LIBS -l zint /usr/lib/x86_64-linux-gnu/libpng12.so.0 /usr/lib/x86_64-linux-gnu/libpng12.a"
 fi
